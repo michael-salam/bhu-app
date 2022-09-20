@@ -34,7 +34,7 @@ function App() {
     <>
       {locationCheck() && <Navbar />}
       <Routes>
-        <Route exact path="/" element={<Index />} />
+        <Route path="/" element={<Index />} />
         <Route path="/home" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/people" element={<People />} />
