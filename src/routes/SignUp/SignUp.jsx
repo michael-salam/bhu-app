@@ -65,9 +65,13 @@ const SignUp = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn--pri">
+        {/* <button type="submit" className="btn btn--pri">
           Sign up
-        </button>
+        </button> */}
+
+        <Link to="/home" className="btn btn--pri">
+          Sign up
+        </Link>
 
         <Link className="already-registered" to="/login">
           I already have an account and I want to login

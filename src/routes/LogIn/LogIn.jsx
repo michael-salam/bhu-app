@@ -44,9 +44,12 @@ const LogIn = () => {
           I forgot my password
         </Link>
 
-        <button type="submit" className="btn btn--pri">
+        <Link to="/home" className="btn btn--pri">
           Log in
-        </button>
+        </Link>
+        {/* <button type="submit" className="btn btn--pri">
+          Log in
+        </button> */}
 
         <Link className="not-registered" to="/signup">
           I don't have an account and I want to sign up
