@@ -32,7 +32,8 @@ function App() {
 
   return (
     <>
-      {locationCheck() && <Navbar />}
+      {/* {locationCheck() && <Navbar />} */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/home" element={<Home />} />
