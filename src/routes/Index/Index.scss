@@ -1,0 +1,25 @@
+// import necessary scss utils
+@use "../../scss-utils/variables";
+
+
+.index-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    .actions {
+        margin-top: 2rem;
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .login {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,3 +1,6 @@
+// import necessary scss utils
+@use "./scss-utils/variables";
+
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +9,45 @@
 
 body {
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: variables.$colorTextSecondary;
+}
+
+// general element styles
+h1 {
+    color: variables.$colorTextPrimary
+}
+
+h2 {
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+// reusable classes
+.link,
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    color: variables.$colorLight;
+
+    &--pri {
+        background-color: variables.$colorAccent;
+    }
+
+    &--sec {
+        color: variables.$colorTextSecondary;
+        background-color: variables.$colorLight;
+        border: 2px solid variables.$colorTextSecondary;
+    }
 }

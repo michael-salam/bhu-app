@@ -1,10 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const locationCheck = () => {
+    if (
+      location.pathname === "/" ||
+      location.pathname === "/login" ||
+      location.pathname === "/signup"
+    )
+      return "none";
+    return "flex";
+  };
   return (
-    <nav className="navbar">
-      <Link to="/">BHU Guide</Link>
+    <nav className="navbar" style={{ display: `${locationCheck()}` }}>
+      <div className="brand-name">
+        <Link to="/">BHU Guide</Link>
+      </div>
 
       <ul className="links">
         <li>
