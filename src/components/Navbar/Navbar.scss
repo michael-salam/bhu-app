@@ -1,15 +1,62 @@
+// import utilities
+@use "../../scss-utils/variables";
+@use "../../scss-utils/mixins";
+
 .navbar {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
 
+    .mobile-menu-btn {
+        display: none;
+
+        @include mixins.breakpoint-down(tablet) {
+            display: block;
+        }
+    }
+
+    .close-menu-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 150;
+        border: none;
+    }
+
     .links {
         display: flex;
         align-items: center;
 
+        @include mixins.breakpoint-down(tablet) {
+            display: none;
+        }
+
+        &.mobile {
+            display: grid;
+            place-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #ddedff;
+
+            .link {
+                font-size: 1.5rem;
+                font-weight: 700;
+                background-color: transparent;
+                color: #3e6da3;
+            }
+        }
+
         li {
             &:not(:last-child) {
                 margin-right: 1rem;
+
+                @include mixins.breakpoint-down(tablet) {
+                    margin-right: 0;
+                    margin-bottom: 1rem;
+                }
             }
 
             .link {

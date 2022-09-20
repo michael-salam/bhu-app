@@ -15,7 +15,16 @@ body {
 
 // general element styles
 h1 {
-    color: variables.$colorTextPrimary
+    color: variables.$colorTextPrimary;
+    font-size: clamp(1.5rem, 1.0556rem + 2.2222vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.125rem, 0.8657rem + 1.2963vw, 2rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 0.8519rem + 0.7407vw, 1.5rem);
 }
 
 ul {

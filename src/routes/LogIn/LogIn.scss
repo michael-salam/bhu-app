@@ -1,23 +1,37 @@
 // import necessary scss utils
 @use "../../scss-utils/variables";
+@use "../../scss-utils/mixins";
 
 .login-page,
 .signup-page {
     min-height: 100vh;
+    padding-top: 5rem;
     display: grid;
     place-content: center;
     text-align: center;
     border: 1px solid;
 
+    .heading {
+        padding: 0 1rem;
+    }
+
     #login-form,
     #signup-form {
+        width: 50vw;
+        margin: 2.5rem auto 0 auto;
         padding: 2rem 2.5rem;
-        margin-top: 2.5rem;
-        width: 40vw;
         border-radius: 1rem;
         background-color: variables.$colorLight;
         text-align: left;
         box-shadow: 0px 2px 8px -6px #0005;
+
+        @include mixins.breakpoint-down(tablet) {
+            width: 80vw;
+        }
+
+        @include mixins.breakpoint-down(mobile-md) {
+            width: 95vw;
+        }
 
         .formgroup {
             margin-bottom: 1rem;
@@ -26,6 +40,10 @@
                 display: block;
                 margin-bottom: 0.5rem;
                 font-size: 0.875rem;
+
+                @include mixins.breakpoint-down(mobile-md) {
+                    font-size: 0.75rem;
+                }
             }
 
             input {
@@ -37,6 +55,7 @@
 
                 &::placeholder {
                     color: #aaa;
+
                 }
             }
         }
