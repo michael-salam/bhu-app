@@ -21,13 +21,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/people" element={<People />} />
-        <Route path="/places" element={<Places />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/recover-password" element={<RecoverPassword />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/blog" element={<Blog />} />
+        <Route exact path="/people" element={<People />} />
+        <Route exact path="/places" element={<Places />} />
+        <Route exact path="/login" element={<LogIn />} />
+        <Route exact path="/signup" element={<SignUp />} />
+        <Route exact path="/recover-password" element={<RecoverPassword />} />
       </Routes>
     </Router>
   );
