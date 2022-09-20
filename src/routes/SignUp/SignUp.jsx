@@ -15,7 +15,7 @@ const SignUp = () => {
       <form id="signup-form" action="/home">
         <div className="formgroup">
           <label htmlFor="firstname" className="label">
-            Your firstname:
+            Firstname:
           </label>
           <input
             type="text"
@@ -28,7 +28,7 @@ const SignUp = () => {
 
         <div className="formgroup">
           <label htmlFor="lastname" className="label">
-            Your last name:
+            Last name:
           </label>
           <input
             type="text"
@@ -41,7 +41,7 @@ const SignUp = () => {
 
         <div className="formgroup">
           <label htmlFor="email" className="label">
-            Your Bingham email:
+            Bingham email:
           </label>
           <input
             type="email"
@@ -54,7 +54,7 @@ const SignUp = () => {
 
         <div className="formgroup">
           <label htmlFor="password" className="label">
-            Your BHU Guide password:
+            BHU Guide password:
           </label>
           <input
             type="password"

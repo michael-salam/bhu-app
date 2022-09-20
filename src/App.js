@@ -1,5 +1,5 @@
 // import react router dependencies
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // load styles
 import "./App.scss";
@@ -16,9 +16,23 @@ import SignUp from "./routes/SignUp/SignUp";
 import RecoverPassword from "./routes/RecoverPassword/RecoverPassword";
 
 function App() {
+  const location = useLocation();
+
+  // stop the navbar from displaying if we are on certain pages
+  const locationCheck = () => {
+    if (
+      location.pathname === "/" ||
+      location.pathname === "/login" ||
+      location.pathname === "/signup" ||
+      location.pathname === "/recover-password"
+    )
+      return false;
+    return true;
+  };
+
   return (
-    <Router>
-      <Navbar />
+    <>
+      {locationCheck() && <Navbar />}
       <Routes>
         <Route exact path="/" element={<Index />} />
         <Route path="/home" element={<Home />} />
@@ -29,7 +43,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/recover-password" element={<RecoverPassword />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 

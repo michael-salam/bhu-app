@@ -16,7 +16,7 @@ const LogIn = () => {
       <form id="login-form" action="/home">
         <div className="formgroup">
           <label htmlFor="email" className="label">
-            Your Bingham email:
+            Bingham email:
           </label>
           <input
             type="email"
@@ -29,7 +29,7 @@ const LogIn = () => {
 
         <div className="formgroup">
           <label htmlFor="password" className="label">
-            Your BHU Guide password:
+            BHU Guide password:
           </label>
           <input
             type="password"

@@ -1,24 +1,10 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = () => {
   // define state to store whether the mobile menu is open or not
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const location = useLocation();
-
-  // stop the navbar from displaying if we are on certain pages
-  const locationCheck = () => {
-    if (
-      location.pathname === "/" ||
-      location.pathname === "/login" ||
-      location.pathname === "/signup" ||
-      location.pathname === "/recover-password"
-    )
-      return "none";
-    return "flex";
-  };
 
   // logic to toggle the mobile menu open or close
   const handleToggleMobileMenu = () => {
@@ -30,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar" style={{ display: `${locationCheck()}` }}>
+    <nav className="navbar">
       <div className="brand-name">
         <Link to="/">BHU Guide</Link>
       </div>
