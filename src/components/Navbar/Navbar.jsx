@@ -8,7 +8,8 @@ const Navbar = () => {
     if (
       location.pathname === "/" ||
       location.pathname === "/login" ||
-      location.pathname === "/signup"
+      location.pathname === "/signup" ||
+      location.pathname === "/recover-password"
     )
       return "none";
     return "flex";

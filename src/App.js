@@ -13,6 +13,7 @@ import People from "./routes/People/People";
 import Places from "./routes/Places/Places";
 import LogIn from "./routes/LogIn/LogIn";
 import SignUp from "./routes/SignUp/SignUp";
+import RecoverPassword from "./routes/RecoverPassword/RecoverPassword";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/places" element={<Places />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/recover-password" element={<RecoverPassword />} />
       </Routes>
     </Router>
   );

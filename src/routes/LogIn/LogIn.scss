@@ -1,0 +1,65 @@
+// import necessary scss utils
+@use "../../scss-utils/variables";
+
+.login-page,
+.signup-page {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border: 1px solid;
+
+    #login-form,
+    #signup-form {
+        padding: 2rem 2.5rem;
+        margin-top: 2.5rem;
+        width: 40vw;
+        border-radius: 1rem;
+        background-color: variables.$colorLight;
+        text-align: left;
+        box-shadow: 0px 2px 8px -6px #0005;
+
+        .formgroup {
+            margin-bottom: 1rem;
+
+            .label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+            }
+
+            input {
+                padding: 0.75rem 1rem;
+                border-radius: 5rem;
+                border: 1px solid variables.$colorTextSecondary;
+                width: 100%;
+                font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+                &::placeholder {
+                    color: #aaa;
+                }
+            }
+        }
+
+        .forgot-password,
+        .already-registered,
+        .not-registered {
+            display: block;
+            text-decoration: underline;
+            font-size: 0.875rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        button {
+            margin-top: 1.5rem;
+            width: 100%;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                background-color: lighten(variables.$colorPrimary, 10%);
+            }
+        }
+
+    }
+}

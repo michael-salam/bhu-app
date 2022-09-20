@@ -10,6 +10,7 @@
 body {
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: variables.$colorTextSecondary;
+    // background-color: #3e6da308;
 }
 
 // general element styles
@@ -17,15 +18,18 @@ h1 {
     color: variables.$colorTextPrimary
 }
 
-h2 {
-    font-weight: 300;
-}
-
 ul {
     list-style: none;
 }
 
 // reusable classes
+.heading {
+    .sub {
+        font-weight: 300;
+        margin-top: 0.5rem;
+    }
+}
+
 .link,
 a {
     text-decoration: none;
@@ -36,13 +40,13 @@ a {
     display: inline-block;
     border: none;
     cursor: pointer;
-    padding: 1rem;
-    border-radius: 0.25rem;
+    padding: 1rem 1.5rem;
+    border-radius: 25rem;
     font-weight: 700;
     color: variables.$colorLight;
 
     &--pri {
-        background-color: variables.$colorAccent;
+        background-color: variables.$colorPrimary;
     }
 
     &--sec {
